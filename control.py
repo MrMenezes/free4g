@@ -36,7 +36,7 @@ def restart():
 def verify():
     try:
         url = "https://fast.com/"
-        r = requests.get(url)
+        r = requests.get(url,timeout=10)
         if len(r.history) == 0:
             logging.info("Internet OK")
             return 2
